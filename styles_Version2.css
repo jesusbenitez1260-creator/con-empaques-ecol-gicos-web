@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f8f4;
+    color: #333;
+}
+
+header {
+    background: #228B22;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    margin: 40px auto;
+    max-width: 900px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(34,139,34,0.1);
+}
+
+.btn-descargar,
+.btn-whatsapp {
+    display: inline-block;
+    margin: 10px 10px 0 0;
+    padding: 10px 20px;
+    background: #228B22;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background .2s;
+}
+
+.btn-descargar:hover,
+.btn-whatsapp:hover {
+    background: #175a17;
+}
+
+.catalogo {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.producto {
+    width: 250px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    background: #f6fff6;
+    text-align: center;
+}
+
+.producto img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input, form textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+form button {
+    background: #228B22;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form button:hover {
+    background: #175a17;
+}
+
+#carrito {
+    margin-top: 30px;
+    padding: 15px;
+    background: #f2fcf2;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    max-width: 400px;
+}
+
+#carrito h3 {
+    margin-top: 0;
+}
+
+footer {
+    text-align: center;
+    background: #228B22;
+    color: white;
+    padding: 12px 0;
+    margin-top: 40px;
+    border-radius: 0 0 10px 10px;
+}
