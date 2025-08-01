@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empaques Ecológicos Personalizados</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Empaques Ecológicos Personalizados</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="inicio">
+        <h2>Bienvenido</h2>
+        <p>Somos una empresa dedicada a la fabricación de empaques ecológicos personalizados, comprometidos con el medio ambiente y la innovación.</p>
+        <a href="catalogo.pdf" download class="btn-descargar">Descargar catálogo PDF</a>
+        <a href="https://wa.me/521XXXXXXXXXX?text=Hola,%20quiero%20información%20sobre%20empaques%20ecológicos" target="_blank" class="btn-whatsapp">¡Contáctanos por WhatsApp!</a>
+    </section>
+    <section id="productos">
+        <h2>Productos</h2>
+        <div class="catalogo">
+            <div class="producto">
+                <img src="bolsa.jpg" alt="Bolsa ecológica">
+                <h3>Bolsas ecológicas</h3>
+                <p>Personalizadas con tu marca, biodegradables y resistentes.</p>
+                <button onclick="agregarAlCarrito('Bolsas ecológicas')">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="caja.jpg" alt="Caja ecológica">
+                <h3>Cajas ecológicas</h3>
+                <p>Ideales para envíos y empaques de productos, hechas de materiales reciclados.</p>
+                <button onclick="agregarAlCarrito('Cajas ecológicas')">Agregar al carrito</button>
+            </div>
+            <!-- Agrega más productos aquí -->
+        </div>
+        <div id="carrito">
+            <h3>Carrito de compras</h3>
+            <ul id="lista-carrito"></ul>
+            <button onclick="vaciarCarrito()">Vaciar carrito</button>
+        </div>
+    </section>
+    <section id="sobre-nosotros">
+        <h2>Sobre Nosotros</h2>
+        <p>Nuestra misión es ofrecer soluciones de empaque sostenibles, adaptadas a las necesidades de cada cliente. Conoce más sobre nuestro compromiso.</p>
+    </section>
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <form id="contactForm">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+        <p id="mensaje-confirmacion"></p>
+    </section>
+    <footer>
+        <p>&copy; 2025 Empaques Ecológicos Personalizados. Todos los derechos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
