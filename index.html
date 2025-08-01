@@ -1,66 +1,132 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Empaques Ecológicos Personalizados</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>Empaques Ecológicos Personalizados</h1>
+<header>
+    <div class="container">
+        <img src="logo.png" alt="Logo CON EMPAQUES S.A.S" class="logo">
         <nav>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#productos">Productos</a></li>
-                <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+                <li><a href="#ventajas">Ventajas</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
-    </header>
-    <section id="inicio">
-        <h2>Bienvenido</h2>
-        <p>Somos una empresa dedicada a la fabricación de empaques ecológicos personalizados, comprometidos con el medio ambiente y la innovación.</p>
-        <a href="catalogo.pdf" download class="btn-descargar">Descargar catálogo PDF</a>
-        <a href="https://wa.me/521XXXXXXXXXX?text=Hola,%20quiero%20información%20sobre%20empaques%20ecológicos" target="_blank" class="btn-whatsapp">¡Contáctanos por WhatsApp!</a>
-    </section>
-    <section id="productos">
-        <h2>Productos</h2>
-        <div class="catalogo">
-            <div class="producto">
-                <img src="bolsa.jpg" alt="Bolsa ecológica">
-                <h3>Bolsas ecológicas</h3>
-                <p>Personalizadas con tu marca, biodegradables y resistentes.</p>
-                <button onclick="agregarAlCarrito('Bolsas ecológicas')">Agregar al carrito</button>
-            </div>
-        
+    </div>
+</header>
+<section id="productos">
+    <h2>Nuestros Productos</h2>
+    <div class="productos-grid">
+        <div class="producto-card">
+            <img src="empaque1.jpg" alt="Empaque ecológico Latitud Sur">
+            <h3>Empaque Latitud Sur</h3>
+            <p>Empaque ecológico personalizado para café especial. Material resistente y diseño natural. 500g.</p>
+            <button onclick="agregarAlCarrito('Empaque Latitud Sur')">Agregar al carrito</button>
         </div>
-        <div id="carrito">
-            <h3>Carrito de compras</h3>
-            <ul id="lista-carrito"></ul>
-            <button onclick="vaciarCarrito()">Vaciar carrito</button>
-        </div>
-    </section>
-    <section id="sobre-nosotros">
-        <h2>Sobre Nosotros</h2>
-        <p>Nuestra misión es ofrecer soluciones de empaque sostenibles, adaptadas a las necesidades de cada cliente. Conoce más sobre nuestro compromiso.</p>
-    </section>
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <form id="contactForm">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
-            <label for="email">Correo electrónico:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" required></textarea>
-            <button type="submit">Enviar</button>
-        </form>
-        <p id="mensaje-confirmacion"></p>
-    </section>
-    <footer>
-        <p>&copy; 2025 Empaques Ecológicos Personalizados. Todos los derechos reservados.</p>
-    </footer>
-    <script src="script.js"></script>
-</body>
-</html>
+        <!-- Más productos con tus otras imágenes -->
+    </div>
+</section>
+<a href="catalogo.pdf" class="btn-descargar" download>Descargar Catálogo PDF</a>
+<a href="https://wa.me/521XXXXXXXXXX?text=Hola,%20quiero%20información%20sobre%20empaques%20ecológicos" target="_blank" class="btn-whatsapp">WhatsApp</a>
+<form id="contactForm">
+    <input type="text" placeholder="Nombre" required>
+    <input type="email" placeholder="Correo electrónico" required>
+    <textarea placeholder="Mensaje" required></textarea>
+    <button type="submit">Enviar</button>
+</form>
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: #ffffff;
+    color: #10271d;
+}
+header {
+    background: #10271d;
+    color: #ffffff;
+    padding: 16px 0;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+    justify-content: center;
+}
+nav a {
+    color: #469595;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color .2s;
+}
+nav a:hover {
+    color: #ffffff;
+    background: #469595;
+    border-radius: 6px;
+    padding: 6px 12px;
+}
+.logo {
+    height: 60px;
+    vertical-align: middle;
+}
+.productos-grid {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.producto-card {
+    background: #f8fcfb;
+    border: 2px solid #469595;
+    border-radius: 10px;
+    width: 260px;
+    padding: 15px;
+    box-shadow: 0 1px 7px rgba(16,39,29,0.09);
+    text-align: center;
+}
+.producto-card img {
+    width: 90%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.producto-card h3 {
+    color: #10271d;
+}
+.btn-descargar,
+.btn-whatsapp {
+    background: #469595;
+    color: #fff;
+    border: none;
+    padding: 11px 25px;
+    border-radius: 8px;
+    margin: 12px 8px 0 0;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background .2s;
+}
+.btn-descargar:hover,
+.btn-whatsapp:hover {
+    background: #10271d;
+    color: #469595;
+}
+form input, form textarea {
+    border: 1.5px solid #469595;
+    border-radius: 6px;
+    padding: 9px;
+    margin-bottom: 11px;
+}
+form button {
+    background: #469595;
+    color: #fff;
+    border-radius: 6px;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: background .2s;
+}
+form button:hover {
+    background: #10271d;
+    color: #469595;
+}
+footer {
+    background: #10271d;
+    color: #fff;
+    text-align: center;
+    padding: 14px 0;
+    border-radius: 0 0 10px 10px;
+    margin-top: 40px;
+}
