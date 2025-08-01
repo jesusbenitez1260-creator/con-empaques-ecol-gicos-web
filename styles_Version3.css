@@ -1,0 +1,11 @@
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: #eaf6ea;
+    color: #222;
+}
+/* Cambia #228B22 por el color principal de tu marca */
+header, .btn-descargar, .btn-whatsapp, form button {
+    background: #228B22; 
+}
+/* Cambia fuentes usando Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700,400');
